@@ -1,0 +1,30 @@
+
+
+h1 {
+	color: rgb(51, 82, 23);
+	padding: 25;
+	background-color: rgb(82, 180, 204);
+}
+
+
+.badge {
+	color: #fff;
+	background-color: #6bbd27;	
+  }
+
+#stocks {
+	border-collapse: collapse;
+	width: 100%;
+	background-color: grey;
+}
+
+#stocks th, #stocks tr {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#indicator {
+	color: green;
+	background-color: green;
+	
+}
