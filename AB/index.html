@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="sidenav.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- The overlay -->
    
 </head>
@@ -82,16 +83,28 @@
                         <option value="1">Amzn</option>
                         <option value="1">Ebay</option>
                     </select>
-                    Chart1</div>
-                <div class="col-md-4 jumbotron">Chart2</div>
-                <div class = "col-md-4 jumbotron">Chart 3</div>
+                    Chart1
+                    <div id="plot1"></div>
+                  </div>
+                <div class="col-md-4 jumbotron">Chart2
+                  <div id="plot2"></div>
+                </div>
+                <div class = "col-md-4 jumbotron">Chart 3
+                  <div id="plot3"></div>
+                </div>
                 
               </div>
                 <!-- charts row 2 code starts  -->
                 <div class="row">
-                    <div class="col-md-6 jumbotron"><center>LARGE CHART4</center></div>
-                    <div class="col-md-3 jumbotron">Chart5</div>
-                    <div class = "col-md-3 jumbotron">Chart6</div>
+                    <div class="col-md-6 jumbotron"><center>LARGE CHART4
+                      <div id="plot4"></div>
+                    </center></div>
+                    <div class="col-md-3 jumbotron">Chart5
+                      <div id="plot5"></div>
+                    </div>
+                    <div class = "col-md-3 jumbotron">Chart6
+                      <div id="plot6"></div>
+                    </div>
                     
                   </div>
           
@@ -181,7 +194,11 @@
                   </div>
                 </footer>        
 
-
+<!-- Reading Data and JS files -->
+<!-- <script type="text/javascript" src="stocks.json"> </script> -->
+<!-- <script type="text/javascript" src="stocks1.json"> </script> -->
+<script type="text/javascript" src="plot1.js"> </script>
+<script type="text/javascript" src="plot2.js"> </script>
 
 </body>
 
