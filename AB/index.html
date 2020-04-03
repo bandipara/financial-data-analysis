@@ -21,7 +21,8 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
     <!-- The overlay -->
    
 </head>
@@ -81,8 +82,8 @@
             <div class="jumbotron">
               <div class="input-group mb-3"></div> 
               <form class="form-inline md-form mr-auto mb-4">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-primary" type="submit">Search</button>
+                <input class="form-control mr-sm-2" id="stockInput" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary" id="search" type="submit">Search</button>
               </form> 
               <h3>Amazon<span class="badge">AMZN</span></h3>      
               <p>Company Details here!!</p>
@@ -97,8 +98,7 @@
                         <option value="1">Ebay</option>
                     </select>
                     Chart1
-                    <!-- <div id="plot1"></div> -->
-                    <div class="ct-chart1 ct-perfect-fourth"></div>
+                    <div class="ct-chart ct-perfect-fourth"></div>
                   </div>
                 <div class="col-md-4 jumbotron">Chart2
                   <div id="plot2"></div>
@@ -114,84 +114,19 @@
                     <div class="col-md-6 jumbotron"><center>LARGE CHART4
                       <div id="plot4"></div>
                     </center></div>
-                    <div class="col-md-3 jumbotron">Chart5
+                    <div class="col-md-6 jumbotron">Chart5
                       <div id="plot5"></div>
                     </div>
-                    <div class = "col-md-3 jumbotron">Chart6
+                    <!-- <div class = "col-md-3 jumbotron">Chart6
                       <div id="plot6"></div>
-                    </div>
+                    </div> -->
                     
                   </div>
           
                   <div class="row">
             <!-- table code starts here. Remove the hard coded values in the final version -->
-            <table id="stocks">
-                <tr>
-                    <th>No.</th>
-                    <th>Ticker</th>
-                    <th>Price</th>
-                    <th>Range</th>
-                    <th>High</th>
-                    <th>Low</th>
-                    <th>P/E</th>
-                    <th>Assets</th>
-                    <th>Liabilities</th>
-                    <th>Q1</th>
-                    <th>Q2</th>
-                    <th>Q3</th>
-                    <th>Q4</th>
-                    <th>Buy/Sell</th>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>EBAY</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td id="Indicator1">Buy</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>WMT</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td id="Indicator2">Sell</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>BABA</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td>123</td>
-                    <td id="Indicator3">Neutral</td>
-                </tr>
-
+            <table id="stockstable">
+                
 
             </table>
             
@@ -213,7 +148,7 @@
 
 
 <!-- Reading Data and JS files -->
-<!-- <script type="text/javascript" src="stocks.json"> </script> -->
+<!-- <script type="text/javascript" src="/JM/output_data/WTD_API_AIG_HistoricalMarketData.csv"> </script> -->
 <!-- <script type="text/javascript" src="stocks1.json"> </script> -->
 <!-- <script type="text/javascript" src="plot1.js"> </script> -->
   <!-- Chartist Library -->

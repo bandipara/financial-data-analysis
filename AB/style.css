@@ -17,27 +17,27 @@ h1 {
 	background-color: #6bbd27;	
   }
 
-#stocks {
+#stockstable {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
 	width: 100%;
 	}
 
-#stocks th, #stocks tr {
+#stockstable th, #stockstable tr {
 	border: 1px solid #ddd;
 	padding: 8px;
 	background-color: #ddd;
 }
 
-#stocks tr:nth-child(even){
+#stockstable tr:nth-child(even){
 	background-color: #f2f2f2;
 }
 
-#stocks tr :hover{
+#stockstable tr :hover{
 	background-color: rgb(41, 196, 216);
 }
 
-#stocks th {
+#stockstable th {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: left;
@@ -45,12 +45,29 @@ h1 {
 	color: white;
 	
 }
+ /*
+ #stockstable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 
 #indicator {
 	color: green;
-	background-color: green;
+	background-color: green;} */
 
-}
+
 
 /* 
 dropdown tag
@@ -200,3 +217,5 @@ dropdown tag
 .logo{
     Align: left;
 }
+
+
