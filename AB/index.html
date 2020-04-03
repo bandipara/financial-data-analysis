@@ -19,11 +19,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="sidenav.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     
     <!-- The overlay -->
    
 </head>
 <body>
+
+
 
   <header class="sans-serif">
     
@@ -93,13 +97,15 @@
                         <option value="1">Ebay</option>
                     </select>
                     Chart1
-                    <div id="plot1"></div>
+                    <!-- <div id="plot1"></div> -->
+                    <div class="ct-chart1 ct-perfect-fourth"></div>
                   </div>
                 <div class="col-md-4 jumbotron">Chart2
                   <div id="plot2"></div>
                 </div>
-                <div class = "col-md-4 jumbotron">Chart 3
-                  <div id="plot3"></div>
+                <div class = "col-md-4 jumbotron">
+                  <!-- <div id="plot3"></div> -->
+                  
                 </div>
                 
               </div>
@@ -188,7 +194,8 @@
 
 
             </table>
-
+            
+    
 
                   </div>
                 </div>
@@ -203,14 +210,19 @@
                   </div>
                 </footer>        
 
+
+
 <!-- Reading Data and JS files -->
 <!-- <script type="text/javascript" src="stocks.json"> </script> -->
 <!-- <script type="text/javascript" src="stocks1.json"> </script> -->
 <!-- <script type="text/javascript" src="plot1.js"> </script> -->
-<script type="text/javascript" src="plot4.js"> </script>
-<script type="text/javascript" src="plot5.js"> </script>
+  <!-- Chartist Library -->
 
+  <script type="text/javascript" src="plot3.js"> </script>
+  <script type="text/javascript" src="plot4.js"> </script>
+  <script type="text/javascript" src="plot5.js"> </script>
 
+  
 </body>
 
 
