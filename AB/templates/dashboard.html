@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invest with US!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="/AB/static/style.css">
+    <link rel="stylesheet" href="/AB/static/style1.css">
     
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -26,7 +26,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="stylesheet" media="all" href="{{ url_for('static', filename='/AB/static/style.css')}}">
     <script  src="{{ url_for('static', filename='/AB/static/plot3.js')}}" data-turbolinks-track="reload"></script>
-    
     <!-- The overlay -->
    
 </head>
@@ -58,95 +57,78 @@
 
   
 
-
-  <!--<div id="mySidenav" class="sidenav">
+<!-- 
+  <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <img class ="logo" src="../__Artifacts__/Logos/Invest With Us! (3).png" height="130" width="200">
     <a href="#">Dashboard</a>
     <a href="#">About</a>
     <a href="#">Research</a>
     <a href="#">Predictions</a>
-    <a href="#">Contact</a>
-  </div>-->
+    <a href="#">Contact</a> -->
+  <!-- </div> -->
   
-  <!-- Use any element to open the sidenav 
-  <span onclick="openNav()"><img class ="logo" src="../__Artifacts__/Logos/Invest With Us! (3).png" height="80" width="100"></span>-->
+  <!-- Use any element to open the sidenav
+  <span onclick="openNav()"><img class ="logo" src="../__Artifacts__/Logos/Invest With Us! (3).png" height="80" width="100"></span> -->
   
  
-    <!-- <div><h1>Invest with Us!</h1> 
+    <!-- <div><h1>Invest with Us!</h1> -->
       
         
     </div>
-        <div class="container-fluid">
-            <p>Invest with us and find the true value of the stocks.<br> Is the stock Buy or Sell? Let us help you with your questions.</p>
-             Content here 
-          </div> -->
+        <!-- <div class="container-fluid"> -->
+            <!-- <p>Invest with us and find the true value of the stocks.<br> Is the stock Buy or Sell? Let us help you with your questions.</p>
+            Content here -->
+            <!-- <div class="col-md-6 jumbotron">TEMP
+              <div id="plot10"></div>
+            </div> -->
         <!-- Jumbotron code starts here -->
-          <div class="container-fluid">
-            <div class="jumbotron">
+        
+          <!-- <div class="container-fluid"> -->
+            <div class="row">
+            <div class="col-md-6 jumbotron">
               <div class="input-group mb-3"></div> 
               <form class="form-inline md-form mr-auto mb-4">
                 <input class="form-control mr-sm-2" id="stockInput" type="text" placeholder="Search" aria-label="Search">
                 <button class="btn btn-primary" id="search" type="search">Reset</button>
               </form> 
-              
-              
+              <!-- <h3>Amazon<span class="badge">AMZN</span></h3>      
+              <p>Company Details here!!</p> -->
             </div>
-           
-            
+            <div class="col-md-6 jumbotron">
+            <img class="img" src="/__Artifacts__/Logos/Invest With Us! (7).png" height="300" width="300">
+              </div>
+          </div>
+        </div>
             <!-- Charts code starts here -->
             <div class="row">
-              <div class="col-md-6 jumbotron">
+                <div class="col-md-6 jumbotron">
+                  
                     <!-- <select class="mdb-select md-form colorful-select dropdown-primary" searchable="search here...">
-                    <option value="1">BAC</option>
-                    <option value="1">BRK.B</option>
-                    <option value="1">C</option>
-                    <option value="1">JPM</option>
-                    <option value="1">WFC</option>
-                    <option value="1">AXP</option>
-                    <option value="1">BLK</option>
-                    <option value="1">GS</option>
-                    <option value="1">MS</option>
-                    <option value="1">USB</option>
-                    <option value="1">CB</option>
-                    <option value="1">PNC</option>
-                    <option value="1">SCHW</option>
-                    <option value="1">SPGI</option>
-                    <option value="1">TFC</option>
-                    <option value="1">AON</option>
-                    <option value="1">ICE</option>
-                    <option value="1">MCO</option>
-                    <option value="1">MMC</option>
-                    <option value="1">PGR</option>
-                    <option value="1">AIG</option>
-                    <option value="1">ALL</option>
-                    <option value="1">BK</option>
-                    <option value="1">COF</option>
-                    <option value="1">MET</option>
+                        <option value="1">Amzn</option>
+                        <option value="1">Ebay</option>
                     </select> -->
-                    Chart1
-                    <div class="ct-chart ct-perfect-fourth"></div>
+                    <div><canvas id="myChart1"></canvas></div>
+                    
                   </div>
-                <div class="col-md-4 jumbotron">Chart2
-                  <div id="plot2"></div>
+                <div class="col-md-6 jumbotron">
+                  <canvas id="myChart2"></canvas>
+                  
                 </div>
-                <div class = "col-md-4 jumbotron">
-                  <!-- <div id="plot3"></div> -->
+                
                   
                 </div>
                 
               </div>
                 <!-- charts row 2 code starts  -->
                 <div class="row">
-                    <div class="col-md-6 jumbotron"><center>LARGE CHART4
+                    <div class="col-md-6 jumbotron">
                       <div id="plot4"></div>
-                    </center></div>
-                    <div class="col-md-6 jumbotron">Chart5
+                    </div>
+                    <div class="col-md-6 jumbotron">
                       <div id="plot5"></div>
                     </div>
-                    <!-- <div class = "col-md-3 jumbotron">Chart6
-                      <div id="plot6"></div>
-                    </div> -->
+                 
                     
                   </div>
           
@@ -179,11 +161,11 @@
 <!-- <script type="text/javascript" src="stocks1.json"> </script> -->
 <!-- <script type="text/javascript" src="plot1.js"> </script> -->
   <!-- Chartist Library -->
-  <script type="text/javascript" src="plot2.js"> </script>
-  <script type="text/javascript" src="plot3.js"> </script>
-  <script type="text/javascript" src="plot4.js"> </script>
-  <script type="text/javascript" src="plot5.js"> </script>
 
+  <script type="text/javascript" src="/AB/static/plot3.js"> </script>
+  <!-- <script type="text/javascript" src="plot4.js"> </script>-->
+  <script type="text/javascript" src="/AB/static/plot5.js"> </script>
+  <script type="text/javascript" src="/AB/static/test.js"> </script>
   
 </body>
 

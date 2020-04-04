@@ -132,7 +132,7 @@ function makeplot5(stock) {
      type: "scatter"
    }];
    var layout = {
-    title: `Open Price - ${stock}`,
+    title: `Close Price - ${stock}`,
     xaxis: { title: "Year" },
     yaxis: { title: "USD($)"}
   };
