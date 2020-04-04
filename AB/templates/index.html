@@ -23,6 +23,9 @@
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='/AB/static/style.css')}}">
+    <script  src="{{ url_for('static', filename='/AB/static/plot3.js')}}" data-turbolinks-track="reload"></script>
     <!-- The overlay -->
    
 </head>
@@ -76,7 +79,9 @@
         <div class="container-fluid">
             <p>Invest with us and find the true value of the stocks.<br> Is the stock Buy or Sell? Let us help you with your questions.</p>
             <!-- Content here -->
-          </div>
+            <div class="col-md-6 jumbotron">TEMP
+              <div id="plot10"></div>
+            </div>
         <!-- Jumbotron code starts here -->
           <div class="container-fluid">
             <div class="jumbotron">
@@ -92,34 +97,33 @@
             
             <!-- Charts code starts here -->
             <div class="row">
-                <div class="col-md-4 jumbotron">
+                <div class="col-md-6 jumbotron">
+                  
                     <select class="mdb-select md-form colorful-select dropdown-primary" searchable="search here...">
                         <option value="1">Amzn</option>
                         <option value="1">Ebay</option>
                     </select>
-                    Chart1
-                    <div class="ct-chart ct-perfect-fourth"></div>
+                    <div><canvas id="myChart1"></canvas></div>
+                    
                   </div>
-                <div class="col-md-4 jumbotron">Chart2
-                  <div id="plot2"></div>
+                <div class="col-md-6 jumbotron">Chart2
+                  <canvas id="myChart2"></canvas>
+                  
                 </div>
-                <div class = "col-md-4 jumbotron">
-                  <!-- <div id="plot3"></div> -->
+                
                   
                 </div>
                 
               </div>
                 <!-- charts row 2 code starts  -->
                 <div class="row">
-                    <div class="col-md-6 jumbotron"><center>LARGE CHART4
+                    <div class="col-md-6 jumbotron">
                       <div id="plot4"></div>
-                    </center></div>
-                    <div class="col-md-6 jumbotron">Chart5
+                    </div>
+                    <div class="col-md-6 jumbotron">
                       <div id="plot5"></div>
                     </div>
-                    <!-- <div class = "col-md-3 jumbotron">Chart6
-                      <div id="plot6"></div>
-                    </div> -->
+                 
                     
                   </div>
           
@@ -153,10 +157,10 @@
 <!-- <script type="text/javascript" src="plot1.js"> </script> -->
   <!-- Chartist Library -->
 
-  <script type="text/javascript" src="plot3.js"> </script>
-  <script type="text/javascript" src="plot4.js"> </script>
-  <script type="text/javascript" src="plot5.js"> </script>
-
+  <script type="text/javascript" src="/AB/static/plot3.js"> </script>
+  <!-- <script type="text/javascript" src="plot4.js"> </script>-->
+  <script type="text/javascript" src="/AB/static/plot5.js"> </script>
+  <script type="text/javascript" src="/AB/static/test.js"> </script>
   
 </body>
 
